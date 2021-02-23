@@ -5,6 +5,8 @@ const hbs=require('hbs')
 const forecast= require('./utils/forecast')
 const geocode=require('./utils/geocode')
 
+
+
 const app=express()
 
 // default setting to set the directory
@@ -53,6 +55,7 @@ app.get('/products',(req,res)=>{
         res.send({ error:'your request is invalid'})
     }
 })
+
 
 app.get('/weather',(req, res)=>{
      if(!req.query.address){
